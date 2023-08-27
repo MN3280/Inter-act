@@ -15,32 +15,50 @@ export default function OrderChart() {
     <>
       <div className="w-[183px] h-[220px] relative mx-4">
         <div className="w-[183px] h-[220px] absolute bg-[#171e37] rounded-[7px]">
-          <div className="flex justify-center items-center mt-20">
+          <div className="flex justify-center items-center mt-20 ml-10 ">
             <BarChart
               width={150}
               height={150}
               data={data}
               margin={{
-                top: 18,
-                right: 30,
-                left: 20,
+                top: 20,
+                right: 20,
+                left: 90,
                 bottom: 28,
               }}
             >
               <Bar
                 dataKey="totalOrder"
-                stackId="a"
-                fill="#ff814a"
-                // isAnimationActive={false}
+                fill="#ff9f43"
+                isAnimationActive={false}
                 radius={[0, 0, 10, 10]}
-              />
+                stackId="a"
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill="#ff9f43"
+                    strokeWidth={1}
+                    x={index * (100 / data.length)}
+                  />
+                ))}
+              </Bar>
               <Bar
                 dataKey="order"
-                stackId="a"
                 fill="#2e4c85"
                 radius={[10, 10, 0, 0]}
-                // isAnimationActive={false}
-              />
+                isAnimationActive={false}
+                stackId="a"
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-upper-${index}`}
+                    fill="#2e4c85"
+                    strokeWidth={1}
+                    x={index * (100 / data.length)}
+                  />
+                ))}
+              </Bar>
             </BarChart>
           </div>
 

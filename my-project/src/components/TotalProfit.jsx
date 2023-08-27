@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, LineChart, Line } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, LineChart, Line, Cell } from "recharts";
 import { totalProfitData } from "../../data/totalProfitData";
 import { balanceData } from "../../data/balanceData";
 
@@ -13,13 +13,13 @@ export default function TotalProfit() {
         <div className="w-[664px] h-[363px] left-0 top-0 absolute">
           <div className="w-[663px] h-[362px] left-0 top-0 absolute bg-[#171e37] rounded-md" />
           <BarChart
-            width={400}
+            width={460}
             height={390}
             data={data}
             margin={{
-              top: -10,
-              right: 8,
-              left: 18,
+              top: -20,
+              right: 30,
+              left: 30,
               bottom: 58,
             }}
           >
@@ -28,7 +28,7 @@ export default function TotalProfit() {
               axisLine={false}
               tickLine={false}
               tick={{ fontSize: 12, fill: "#b9b9c3" }}
-              padding={{ left: 20, right: 30 }}
+              padding={{ left: 30, right: 30 }}
             />
             <YAxis
               ticks={yTicks}
@@ -42,13 +42,41 @@ export default function TotalProfit() {
               fill="#02b984"
               radius={[10, 10, 0, 0]}
               isAnimationActive={false}
-            />
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-upper-${index}`}
+                  fill="#02b984"
+                  strokeWidth={0}
+                  x={
+                    index * (280 / data.length) +
+                    125 +
+                    (280 / data.length - 20) / 2
+                  }
+                />
+              ))}
+            </Bar>
+
+            {/* Bottom Bar */}
             <Bar
               dataKey="expense"
               fill="#ff9f43"
-              radius={[10, 10, 0, 0]}
               isAnimationActive={false}
-            />
+              radius={[10, 10, 0, 0]}
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill="#ff9f43"
+                  strokeWidth={0}
+                  x={
+                    index * (280 / data.length) +
+                    125 +
+                    (280 / data.length - 20) / 2
+                  }
+                />
+              ))}
+            </Bar>
           </BarChart>
           <div className="left-[368px] top-[28px] absolute text-[#828282] text-xs font-normal leading-[18px]">
             Expense
