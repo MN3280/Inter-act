@@ -1,7 +1,6 @@
 import EarningChart from "./EarningChart";
 import OrderChart from "./OrderChart";
 import ProfitChart from "./ProfitChart";
-import Card from "../components/Card";
 import TotalProfit from "./TotalProfit";
 import ActivityOverview from "./ActivityOverview";
 

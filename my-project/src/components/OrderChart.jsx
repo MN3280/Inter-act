@@ -1,5 +1,5 @@
 import { orderData } from "../../data/orderChartData";
-import { BarChart, Bar, YAxis, XAxis, Cell } from "recharts";
+import { BarChart, Bar, Cell } from "recharts";
 
 export default function OrderChart() {
   const data = orderData;

@@ -56,8 +56,6 @@ export default function TotalProfit() {
                 />
               ))}
             </Bar>
-
-            {/* Bottom Bar */}
             <Bar
               dataKey="expense"
               fill="#ff9f43"

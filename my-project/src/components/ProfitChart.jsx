@@ -1,21 +1,21 @@
 import { LineChart, Line, CartesianGrid } from "recharts";
 import { totalProfit } from "../../data/profitChartData";
 
-const data = totalProfit;
-const CustomDot = (props) => {
-  const { cx, cy, stroke, value } = props;
-
-  if (value === data[data.length - 1].value) {
-    return (
-      <svg x={cx - 15} y={cy - 15} width={40} height={40} fill={stroke}>
-        <circle cx={15} cy={15} r={10} />
-        <circle cx={15} cy={15} r={5} fill="black" />
-      </svg>
-    );
-  }
-  return null;
-};
 export default function ProfitChart() {
+  const data = totalProfit;
+  const CustomDot = (props) => {
+    const { cx, cy, stroke, value } = props;
+
+    if (value === data[data.length - 1].value) {
+      return (
+        <svg x={cx - 15} y={cy - 15} width={40} height={40} fill={stroke}>
+          <circle cx={15} cy={15} r={10} />
+          <circle cx={15} cy={15} r={5} fill="black" />
+        </svg>
+      );
+    }
+    return null;
+  };
   return (
     <>
       <div className="w-[162px] h-[220px] relative">
