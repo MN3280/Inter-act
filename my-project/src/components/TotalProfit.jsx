@@ -53,6 +53,7 @@ export default function TotalProfit() {
                     125 +
                     (280 / data.length - 20) / 2
                   }
+                  style={{ paddingBottom: "10px" }}
                 />
               ))}
             </Bar>
