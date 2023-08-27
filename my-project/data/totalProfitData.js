@@ -26,8 +26,8 @@ export const totalProfitData = [
     },
     {
         name: "Jun",
-        earnings: 50,
-        expense: -50,
+        earnings: 60,
+        expense: -60,
     },
     {
         name: "July",

@@ -39,7 +39,7 @@ export default function OrderChart() {
                     key={`cell-${index}`}
                     fill="#ff9f43"
                     strokeWidth={1}
-                    x={index * (100 / data.length)}
+                    x={index * (140 / data.length)}
                   />
                 ))}
               </Bar>
@@ -55,7 +55,7 @@ export default function OrderChart() {
                     key={`cell-upper-${index}`}
                     fill="#2e4c85"
                     strokeWidth={1}
-                    x={index * (100 / data.length)}
+                    x={index * (140 / data.length)}
                   />
                 ))}
               </Bar>
