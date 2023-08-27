@@ -1,56 +1,62 @@
 export default function Card() {
-  const radius = 22;
+  const radius = 26;
   const circleStyle = {
-    stroke: "#fefffe",
-    strokeWidth: 4,
-    strokeDasharray: 50,
-    strokeDashoffset: 50,
+    stroke: "#ffffff",
+    strokeWidth: 3,
+    strokeDasharray: 60,
+    strokeDashoffset: 60,
     fill: "transparent",
+    strokeLinecap: "round",
   };
   return (
     <>
-      <div className="w-[1126px] h-[100px] justify-center items-start gap-[25px] inline-flex">
+      <div className="w-[1126px] h-[100px] justify-center items-start gap-[25px] inline-flex ">
         {/* total cost */}
         <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-[#0BB885] rounded-lg justify-center items-center gap-5 inline-flex">
-          {/* <div className="w-8 h-8 px-0.5 pt-[3px] pb-1 justify-center items-center flex">
-            <div className="w-3 h-[4px] relative">
-              <div className="w-11 h-11 left-[6px] top-[6px] absolute opacity-25 bg-white rounded-full" />
-              <div className="w-14 h-14 left-0 top-0 absolute bg-#48CAA4 rounded-full border" />
-              <div className="left-[22px] top-[16px] absolute text-white text-lg font-bold leading-normal">
-                8
-              </div>
-            </div>
-          </div> */}
           <div className="w-[7px] h-[40px] mr-10 relative">
             <svg className={`w-${2 * radius} h-${2 * radius}`}>
+              <defs>
+                <radialGradient
+                  id="innerCircleGradient"
+                  cx="50%"
+                  cy="50%"
+                  r="50%"
+                >
+                  <stop
+                    offset="100%"
+                    style={{ stopColor: "#dddd", stopOpacity: 0.8 }}
+                  />
+                </radialGradient>
+              </defs>
               <circle
-                className="w-11 h-11 left-[6px] top-[6px] absolute opacity-25 bg-white"
+                className="w-11 h-11 left-[6px] top-[6px] absolute opacity-25  "
                 cx={radius}
                 cy={radius}
-                r={radius - 4}
+                r={20}
                 strokeWidth="8"
+                fill="url(#innerCircleGradient)"
               />
               <circle
                 style={circleStyle}
                 cx={radius}
                 cy={radius}
-                r={radius - 4}
-                strokeWidth="8"
-                className="w-14 h-14 left-0 top-0 absolute"
+                r={24}
+                className="w-14 h-14 left-0 top-0 absolute rounded-sm"
+                strokeWidth="6"
               />
             </svg>
           </div>
           <div className="flex-col justify-start items-start gap-0.5 inline-flex">
-            <div className="text-white text-base font-bold leading-normal">
+            <div className="text-[#ffffff] text-base font-bold leading-normal">
               Total Cost
             </div>
-            <div className="text-gray-500 text-sm font-medium leading-tight">
+            <div className="text-[#ffffff] text-sm font-medium leading-tight">
               $31.868
             </div>
           </div>
         </div>
 
-        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-slate-800 rounded-lg justify-center items-center gap-5 inline-flex">
+        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-[#171e37] rounded-lg justify-center items-center gap-5 inline-flex">
           <div className="w-8 h-8 px-0.5 pt-[3px] pb-1 justify-center items-center flex">
             <div className="w-7 h-[25px] relative">
               <svg
@@ -95,8 +101,8 @@ export default function Card() {
           </div>
         </div>
 
-        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-slate-800 rounded-lg justify-center items-center gap-5 inline-flex">
-          <div className="w-8 h-8 p-0.5 justify-center items-center flex">
+        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-[#171e37] rounded-lg justify-center items-center gap-5 inline-flex">
+          <div className="w-8 h-8 p-1 justify-center items-center flex">
             <div className="w-7 h-7 relative">
               <svg
                 width="28"
@@ -140,7 +146,7 @@ export default function Card() {
             </div>
           </div>
         </div>
-        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-slate-800 rounded-lg justify-center items-center gap-5 inline-flex">
+        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-[#171e37] rounded-lg justify-center items-center gap-5 inline-flex">
           <div className="w-8 h-8 relative">
             <svg
               width="27"
@@ -170,7 +176,7 @@ export default function Card() {
             </div>
           </div>
         </div>
-        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-slate-800 rounded-lg justify-center items-center gap-5 inline-flex">
+        <div className="grow shrink basis-0 self-stretch px-[27px] py-8 bg-[#171e37] rounded-lg justify-center items-center gap-5 inline-flex">
           <div className="w-8 h-8 p-0.5 justify-center items-center flex">
             <div className="w-7 h-7 relative">
               <svg
@@ -195,7 +201,7 @@ export default function Card() {
               </svg>
             </div>
           </div>
-          <div className="flex-col justify-start items-start gap-0.5 inline-flex">
+          <div className="flex-col justify-start items-start gap-1 inline-flex">
             <div className="text-white text-base font-bold leading-normal">
               $1250
             </div>

@@ -1,8 +1,8 @@
 const Sidebar = () => {
   return (
     <>
-      <div className="w-[250px] h-[1024px] p-5  bg-[#171e37] flex-col justify-start items-start gap-8 inline-flex">
-        <div className="w-[132px] h-[35px] pl-[2.52px] pr-[30px] pt-[2.23px] pb-[3.23px] justify-start items-center gap-[8.84px] inline-flex">
+      <div className="w-[250px] h-[1050px] p-5  bg-[#171e37] flex-col justify-start items-start gap-8 inline-flex">
+        <div className="w-[132px] h-[35px] pl-[3px] pr-[30px] pt-[2px] pb-[3px] justify-start items-center gap-[9px] inline-flex">
           {/* logo */}
           <svg
             width="28"
@@ -22,7 +22,7 @@ const Sidebar = () => {
           <div className="w-[210px] flex-col justify-start items-start gap-2 flex">
             {/* home */}
             <div className="w-[210px] h-12 px-3 py-5 bg-[#1f2849] rounded-lg justify-start items-center gap-3 inline-flex">
-              <div className="w-5 h-5 px-0.5 py-0.5 justify-center items-center flex">
+              <div className="w-5 h-5 px-1 py-1 justify-center items-center flex">
                 <div className="w-4 h-4 relative flex-col justify-start items-start flex">
                   <svg
                     width="16"
@@ -100,7 +100,7 @@ const Sidebar = () => {
               <div className="w-[124px] text-gray-500 text-base font-medium leading-normal">
                 Notifications
               </div>
-              <div className="w-[18px] h-[18px] p-2.5 bg-[#98FFE0] rounded flex-col justify-center items-center gap-2.5 inline-flex">
+              <div className="w-[18px] h-[18px] p-3 bg-[#98FFE0] rounded flex-col justify-center items-center gap-3 inline-flex">
                 <div className="text-slate-900 text-xs font-medium leading-tight">
                   1
                 </div>
@@ -138,8 +138,8 @@ const Sidebar = () => {
             </div>
 
             <div className="w-[210px] h-12 px-3 py-5 rounded-lg justify-start items-center gap-3 inline-flex">
-              <div className="w-5 h-5 px-0.5 pt-px pb-[1.31px] justify-center items-center flex">
-                <div className="w-4 h-[17.69px] relative flex-col justify-start items-start flex">
+              <div className="w-5 h-5 px-1 pt-1px pb-[1px] justify-center items-center flex">
+                <div className="w-4 h-[18px] relative flex-col justify-start items-start flex">
                   <svg
                     width="16"
                     height="18"
