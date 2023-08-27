@@ -101,6 +101,7 @@ export default function EarningChart() {
                   fill="#ff814a"
                   cornerRadius={10}
                   background={{ fill: "#1f2848" }}
+                  isAnimationActive={false}
                 />
                 <RadialBar
                   minAngle={20}
@@ -108,6 +109,7 @@ export default function EarningChart() {
                   fill="#0fb884"
                   cornerRadius={10}
                   background={{ fill: "#1f2848" }}
+                  isAnimationActive={false}
                 />
               </RadialBarChart>
               <div className="flex-col justify-start items-start gap-[30px] inline-flex">

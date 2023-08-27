@@ -36,7 +36,7 @@ export default function ProfitChart() {
             strokeDasharray="6 6"
             strokeWidth={2}
             stroke="#091826"
-            x={25} // Adjust based on the left margin
+            x={25}
             y={120}
           />
           <Line
@@ -44,6 +44,7 @@ export default function ProfitChart() {
             stroke="#0fb884"
             strokeWidth={3}
             dot={<CustomDot />}
+            isAnimationActive={false}
           />
         </LineChart>
         {/* </div> */}

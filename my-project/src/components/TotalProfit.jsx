@@ -37,8 +37,18 @@ export default function TotalProfit() {
               tick={{ fontSize: 12, fill: "#b9b9c3" }}
               padding={{ top: 20, bottom: 20 }}
             />
-            <Bar dataKey="earnings" fill="#02b984" radius={[10, 10, 0, 0]} />
-            <Bar dataKey="expense" fill="#ff9f43" radius={[10, 10, 0, 0]} />
+            <Bar
+              dataKey="earnings"
+              fill="#02b984"
+              radius={[10, 10, 0, 0]}
+              isAnimationActive={false}
+            />
+            <Bar
+              dataKey="expense"
+              fill="#ff9f43"
+              radius={[10, 10, 0, 0]}
+              isAnimationActive={false}
+            />
           </BarChart>
           <div className="left-[368px] top-[28px] absolute text-[#828282] text-xs font-normal leading-[18px]">
             Expense
@@ -98,6 +108,7 @@ export default function TotalProfit() {
               stroke="#02b984"
               strokeWidth={2}
               dot={false}
+              isAnimationActive={false}
             />
           </LineChart>
         </div>
